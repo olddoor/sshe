@@ -17,7 +17,7 @@ import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.MethodFilterInterceptor;
 
 /**
- * 权限拦截器
+ * 权限拦截器(基于struts2)
  * 
  * @author 孙宇
  * 
