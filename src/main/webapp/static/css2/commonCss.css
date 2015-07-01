@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,input,select,textarea{/* background:transparent !important*/; font-family: "微软雅黑","宋体";}
+body,ul,ol,li,h4,h6,p,div,label,form,h1,h2,h3,h4,h5,h6,table,tr,td,dl,dd,dt,th{ font-family: "微软雅黑","宋体"; margin:0; padding:0; list-style:none !important;list-style-type:none;}
+em{ font-style:normal;}
+a{ text-decoration:none !important;}
+a:hover{ text-decoration:underline !important;} 
+.fl{ float:left;}
+.fr{ float:right;}
+.fixed:after { content: "."; display: block; clear: both; height:0; visibility: hidden; }
+.fixed { display: block; min-height: 1%; }
+.clear{clear:both;visibility:hidden;line-height:1px; float:none;}
+.ui-content{ padding: 0;}
+:focus {outline:0;}
+.ftclear{ background-color:transparent !important; border:none !important; margin:0 !important; font-weight:normal;}
+
+
+
+
+
+.btn{ font-size:1em; border-radius:8px;}
+.btn.blue{ background:#53a5e1; color:#fff;}
+.btn.blue:focus{ background:#5A9ECF !important; color:#fff;}
+.btn.grey{ background:#e1e1e1;  color:#fff;}
+.btn.grey:focus{ background:#bbb !important; color:#fff;}
+.btn.orange{ background:#ff9907;  color:#fff;}
+.btn.orange:focus{ background:#e38704 !important; color:#fff;}
+
+/*修改jquery mobile默认按钮样式 -begin*/
+.ui-btn{ margin:0 !important; padding:0 !important; border:0 !important; background-color:transparent ;}
+.ui-shadow{ box-shadow:none !important;-webkit-box-shadow:none !important;}
+
+
+.phonebg{ position:absolute; top:0; left:50%; margin-left:-188px; width:376px; height:790px; z-index:2; background:url(../images/phonebg.png) center center no-repeat; display:none; }
+@media only screen and (min-width :1025px){
+	body{ background: url(../images/bodybg.jpg) no-repeat; background-size: cover;}
+	.phonebg{ display:block;}
+  .pagebox{ margin-top:120px; width:324px !important; max-height:562px !important;min-height:562px !important; height:562px !important; left:50% !important; margin-left:-160px; background:#fff; z-index:3;}
+}

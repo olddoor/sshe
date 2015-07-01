@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*==============================================================*/
+/*select样式*/
+.sub_select {
+  margin: 50px;
+  padding: 0;
+}
+.sub_select .ui-select {
+  margin: 0;
+  padding: 0;
+  text-shadow: none;
+}
+.sub_select .ui-select span {
+  text-align: left;
+  font-weight: lighter;
+}
+.sub_select .ui-btn {
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #d5d5d5;
+}
+.sub_select .ui-btn:after {
+  content: '>';
+  color: #000;
+  font-weight: lighter;
+  background: none;
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  font-family: 'Heiti SC', Arial, sans-serif;
+}
+.sub_select .ui-btn:hover {
+  background: #fff;
+}
+.sub_select .ui-focus {
+  background: #fff;
+  box-shadow: none;
+}
+.sub_select .ui-focus:after {
+  color: #8C8C8C;
+}
+.sub_select .ui-focus {
+  border-bottom: 1px solid #4fbb9b;
+}
+.sub_select .ui-btn-active {
+  background: #fff;
+}
+/*==============================================================*/
+/*input-text样式*/
+.sub_input_text {
+  margin: 50px;
+  padding: 0;
+  border: none;
+}
+.sub_input_text input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #d5d5d5;
+  outline: none;
+}
+.sub_input_text input:focus {
+  border-bottom: 1px solid #4fbb9b;
+}
+
+
+/*==============================================================*/
+/*input-button样式*/
+
+/*.ui-page-theme-a .ui-btn{ background:#fff !important;}
+.ui-input-btn input{ position:static !important;}*/

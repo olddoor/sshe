@@ -1,0 +1,9 @@
+.layout0 .name .no-topImg:after {
+  content: '';
+}
+.layout1 .name .no-topImg:after {
+  content: '';
+}
+.layout2 .banner .no-topImg:after {
+  content: '';
+}

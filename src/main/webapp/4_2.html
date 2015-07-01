@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.css">
+    <link rel="stylesheet" href="css/ui-input-replace.css" />
+    <link rel="stylesheet" href="css/commonCss.css" />
+   <link rel="stylesheet" href="css/content.css" />
+   <style type="text/css">
+   @media only screen and (min-width :1025px){
+	body{ background: url(images/bodybg_b_1.jpg) center center no-repeat !important; background-size: cover;}
+}
+   </style>
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+$(document).on("pageinit","#pageId1",function(){
+  //控制id="dialpage"(“号码弹框”)弹出代码；------------------------------------------
+  $(".share").on("tap",function(){
+  $("#share").show();
+  });
+  $(".closebtn a").on("tap",function(){
+    $(this).parents(".dialpage").hide();
+  });
+})
+</script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+</head>
+<body>
+<div class="phonebg"></div>
+<div data-role="page" id="pageId1" class="pagebox">
+
+<!----------dialog---------->
+<div class="dialpage" id="share" style="display:none;">
+ <div class="maskbox"></div>
+ <div class="dialbox size-m">
+   <div class="dialwrap">  
+    <div class="dialframe">
+      <div class="shareimg"><img src="images/erweima.jpg"  alt=""/></div>
+      <div class="sharetxt">
+           <a href="javascript:void(0)" class="t">http://www.zhangka.cc/card/view/325d18106a394545ac6a2635f0bdf731</a>
+      </div>
+    
+      
+      </div>
+      
+        <div class="closebtn">
+      <a href="javascript:void(0)" class="close">关闭</a>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+<!-----dialog-end------> 
+
+
+     <div data-role="content" class="show show_bg1">
+     <div class="show_b_con fixed">
+     <div class="wrap">
+     <div class="head_b"><div class="head_img_b"><img src="images/head_img_b.jpg" width="200" height="200"  alt=""/></div></div>
+     <div class="info_b_1">
+     <ul>
+     <li><span class="name_b">张潇儿</span><span class="job_b">设备设计师</span></li>
+     <li><span class="phone_icon_b"></span><span class="phone_b">15944643135</span></li>
+     </ul>
+     </div>
+     
+     <div class="info_b_2">
+     <ul>
+     <li><span class="company_b">福建三元达有限公司</span></li>
+      <li><em class="code_b"></em><span class="text_b">350000</span></li>
+      <li><em class="tel_b"></em><span class="text_b">630000</span></li>
+      <li><em class="email_b"></em><span class="text_b">afdgggg@163.com</span></li>
+      <li><em class="address_b"></em><span class="text_b">软件园G区16软件园G区16</span></li>
+     </ul>
+     </div>
+     
+     </div>
+     </div>
+     
+     
+     
+     </div>
+</div>
+</body>
+</html>

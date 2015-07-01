@@ -1,0 +1,292 @@
+@import "meyer_reset.css";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-family: STHeiti, 'Microsoft Yahei', Simhei, Arial, sans-serif;
+  color: #777;
+}
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+}
+.main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #2b2d2f;
+}
+.main:before {
+  display: block;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(140521_sharePageBg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner {
+  position: absolute;
+  width: 100%;
+  height: 246px;
+  top: 220px;
+}
+.banner .banner-inner {
+  width: 1000px;
+  height: 246px;
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+}
+.banner .banner-inner .left {
+  width: 310px;
+  float: left;
+  text-align: center;
+}
+.banner .banner-inner .left h2 {
+  margin-top: 20px;
+  font-size: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #fafafa;
+}
+.banner .banner-inner .left .qr-code {
+  width: 150px;
+  height: 150px;
+  margin: 13px auto 0;
+  padding: 3px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.banner .banner-inner .left .qr-code img {
+  width: 150px;
+  height: 150px;
+}
+.banner .banner-inner .left span {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #000;
+}
+.banner .banner-inner .right {
+  width: 312px;
+  float: right;
+  text-align: center;
+}
+.banner .banner-inner .right a.button {
+  border: 1px solid #1f699a;
+  font-size: 28px;
+  display: block;
+  width: 215px;
+  height: 60px;
+  margin: 76px auto 0;
+  line-height: 60px;
+  background-color: #fcc918;
+  border-radius: 7px;
+  color: #fefefe;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#47a5e0), to(#2987d2));
+  box-shadow: 0 2px 0 rgba(108, 108, 108, 0.55);
+}
+.banner .banner-inner .right a.button:hover {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#27a5e0), to(#1987d2));
+}
+.banner .banner-inner .right div.share {
+  width: 246px;
+  margin: 55px auto 0;
+  color: #777;
+}
+.banner .banner-inner .right div.share > div {
+  font-size: 24px;
+  text-align: left;
+  margin-left: 14px;
+  line-height: 13px;
+  color: #1e81cb;
+}
+.banner .banner-inner .right div.share > ul {
+  margin-top: 10px;
+}
+.banner .banner-inner .right div.share > ul > li {
+  width: 64px;
+  height: 77px;
+  cursor: pointer;
+  margin: 0 8px;
+  display: block;
+  float: left;
+  position: relative;
+}
+.banner .banner-inner .right div.share > ul > li a {
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner .banner-inner .right div.share > ul > li a:hover {
+  background-color: rgba(98, 98, 98, 0.64);
+}
+.banner .banner-inner .right div.share > ul > li a:hover > .text {
+  color: #fff;
+}
+.banner .banner-inner .right div.share > ul > li a > .icon {
+  width: 38px;
+  height: 38px;
+  margin: 7px auto 0;
+  background-size: 38px 38px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banner .banner-inner .right div.share > ul > li a > .text {
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 8px;
+}
+.banner .banner-inner .right div.share > ul > li.link .icon {
+  background-image: url(140521_link.png);
+}
+.banner .banner-inner .right div.share > ul > li.weibo .icon {
+  background-image: url(140521_weibo.png);
+}
+.banner .banner-inner .right div.share > ul > li.qzone .icon {
+  background-image: url(140521_qzone.png);
+}
+@media (min-width: 1200px) {
+  .banner .banner-inner {
+    width: 1200px;
+    margin-left: -600px;
+  }
+  .banner .banner-inner .left {
+    width: 412px;
+  }
+  .banner .banner-inner .right {
+    width: 412px;
+  }
+}
+.phone {
+  background-image: url(140514_phone.png);
+  width: 376px;
+  height: 790px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: 100%;
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  margin-left: -188px;
+}
+@media (min-height: 691px) and (max-height: 720px) {
+  .phone {
+    top: 5px;
+  }
+}
+@media (max-height: 690px) {
+  .phone {
+    top: -105px;
+  }
+}
+.phone .phone-inner {
+  position: absolute;
+  top: 135px;
+  left: 31px;
+  width: 320px;
+  height: 547px;
+}
+.phone .phone-inner iframe {
+  width: 100%;
+  height: 100%;
+}

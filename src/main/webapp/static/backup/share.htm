@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>分享</title>
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="share.css">
+<style type="text/css"></style><style>.cke{visibility:hidden;}</style><style type="text/css" id="holderjs-style"></style></head>
+<body class="handka navbar-fixed">
+    <div class="main">
+        <div class="banner">
+            <div class="banner-inner">
+                <div class="left">
+                    <h2>姓名</h2>
+                    <div class="qr-code">
+                        <img src="dd3d4f3c78cc4e50982b2c84df5137da.png">
+                    </div>
+                    <span>（扫描二维码，手机预览）</span>
+                </div>
+                <div class="right">
+                </div>
+            </div>
+        </div>
+        <div class="phone">
+            <div class="phone-inner">
+                <iframe src="info.htm" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery-1.js"></script>
+        <script type="text/javascript" src="ender-base.js"></script>
+
+        <script type="text/javascript" src="ender-app.js"></script>
+
+    
+    <script>
+        var yf = require('yf');
+        var $ = require('jQuery');
+        
+        var socialShare = socialShare || {};
+        socialShare.getVcardShareUrl = function(shareTo){
+            var cardInfo = {
+                name: '姓名',
+                avator: '',
+                viewUrl: 'http://www.handka.com/card/view/dd3d4f3c78cc4e50982b2c84df5137da'
+            },
+            shareUrl;
+            if (shareTo === 'weibo') {
+                shareUrl = yf.util.getWeiboShareUrl('vCard', cardInfo);
+            } else if (shareTo === 'qq') {
+                shareUrl = yf.util.getQQShareUrl('vCard', cardInfo);
+            }
+            return shareUrl;
+        }
+
+        $(function(){
+            var queryStr = location.search;
+            if(queryStr && queryStr[0] != '?'){
+                queryStr += '?';
+            }
+            $('[data-link="register"]').attr('href', '/register' + queryStr);
+
+            $('[data-share]').on('click', function(e){
+                //e.preventDefault();
+                //var shareTo = $(this).data('share');
+               //var shareUrl = socialShare.getVcardShareUrl(shareTo);
+               // window.open(shareUrl);
+            })
+
+            $('[data-action="copyUrl"]').zclip({
+               // path:'/img/ZeroClipboard.swf',
+              //  copy: 'http://www.handka.com/card/view/dd3d4f3c78cc4e50982b2c84df5137da'
+            });
+        })
+    </script>
+
+</body></html>
