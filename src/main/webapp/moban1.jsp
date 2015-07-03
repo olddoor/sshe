@@ -7,6 +7,7 @@
 <%
 	String contextPath = request.getContextPath();
 	Syuser u=(Syuser)request.getSession().getAttribute("user");
+	String is_MobleTyte=(String)request.getSession().getAttribute("is_MobleTyte");
 	String QRURL=ConfigUtil.getQRURL();
 	if(u!=null){
 %>
@@ -23,8 +24,11 @@
     <link rel="stylesheet" href="<%=contextPath%>/static/css/content.css" />
     <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+    
 </head>
 <body>
+<script type="text/javascript">
+</script>
 <div class="phonebg"></div>
 <div data-role="page" id="pageId1" class="pagebox">
 
@@ -33,20 +37,22 @@
  <div class="maskbox"></div>
  <div class="dialbox size-m">
    <div class="dialwrap">  
-    <div id="dialframe" class="dialframe">
+    <div class="dialframe">
       <div class="shareimg"><img src="<%=contextPath%>/<%=u.getQrPhoto()%>"  alt=""/></div>
       <div class="sharetxt">
-           <a style="text-align:center;" href="<%=QRURL%><%=u.getLoginname()%>" class="t"><%=QRURL%><%=u.getLoginname()%></a>
+       <a id="myText" style="text-align:center;" href="<%=QRURL%><%=u.getLoginname()%>" class="t"><%=QRURL%><%=u.getLoginname()%></a>
       </div>
       </div>
         <div class="closebtn">
-      <a href="javascript:void(0)" class="close">关闭</a>
+     <ul>
+     <li> <a href="javascript:void(0)" class="close">关闭</a></li>
+     <li> <a id="copy_input" href="javascript:copyUrl();" class="copy"  >复制链接</a></li>
+     </ul>
       </div>
     </div>
   </div>
 </div>
 <!-----dialog-end------> 
-
 
      <div data-role="content" class="show">
      
@@ -108,10 +114,12 @@
      </div>
      </div>
 </div>
+	<input type="hidden" class="is_MobleTyte" value=<%=is_MobleTyte %>>
  <script src="<%=contextPath%>/js/jquery.ua2.js" type="text/javascript" charset="utf-8"></script>
   <script>
-   var is_MobleTyte=$.ua().isMobile ;
-     		
+   //var is_MobleTyte=$.ua().isMobile ;
+     var is_MobleTyte=$("#is_MobleTyte").val();
+    
 $(document).on("pageinit","#pageId1",function(){
   //控制id="dialpage"(“号码弹框”)弹出代码；------------------------------------------
   $(".share").on("tap",function(){
@@ -120,9 +128,16 @@ $(document).on("pageinit","#pageId1",function(){
   $(".closebtn a").on("tap",function(){
     $(this).parents(".dialpage").hide();
   });
-})
-	if(is_MobleTyte){
+});
+
+
+	if(!is_MobleTyte){
 		 $("#share123").hide();
+	}
+	function copyUrl(){
+		var clipBoardContent=$("#myText").html();
+		alert(clipBoardContent);
+	    window.clipboardData.setData("Text",clipBoardContent);
 	}
 </script>
 </body>

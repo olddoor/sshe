@@ -7,6 +7,7 @@
 <%
 	String contextPath = request.getContextPath();
 	Syuser u=(Syuser)request.getSession().getAttribute("user");
+	String is_MobleTyte=(String)request.getSession().getAttribute("is_MobleTyte");
 	String QRURL=ConfigUtil.getQRURL();
 	if(u!=null){
 %>
@@ -38,13 +39,16 @@
  <div class="dialbox size-m">
    <div class="dialwrap">  
     <div class="dialframe">
-      <div class="shareimg"><img src="<%=contextPath%>/<%=u.getQrPhoto() %>"  alt=""/></div>
+      <div class="shareimg"><img src="<%=contextPath%>/<%=u.getQrPhoto()%>"  alt=""/></div>
       <div class="sharetxt">
-           <a href="<%=QRURL%><%=u.getLoginname()%>" class="t"><%=QRURL%><%=u.getLoginname()%></a>
+       <a id="myText" style="text-align:center;" href="<%=QRURL%><%=u.getLoginname()%>" class="t"><%=QRURL%><%=u.getLoginname()%></a>
       </div>
       </div>
         <div class="closebtn">
-      <a href="javascript:void(0)" class="close">关闭</a>
+     <ul>
+     <li> <a href="javascript:void(0)" class="close">关闭</a></li>
+     <li> <a id="copy_input" href="javascript:void(0);" class="copy"  >复制链接</a></li>
+     </ul>
       </div>
     </div>
   </div>
@@ -74,9 +78,11 @@
      </div>
      </div>
 </div>
+	<input type="hidden" class="is_MobleTyte" value=<%=is_MobleTyte %>>
   <script src="<%=contextPath%>/js/jquery.ua2.js" type="text/javascript" charset="utf-8"></script>
   <script>
-   var is_MobleTyte=$.ua().isMobile ;
+  // var is_MobleTyte=$.ua().isMobile ;
+   var is_MobleTyte=$("#is_MobleTyte").val();
      		
 $(document).on("pageinit","#pageId1",function(){
   //控制id="dialpage"(“号码弹框”)弹出代码；------------------------------------------
@@ -87,7 +93,7 @@ $(document).on("pageinit","#pageId1",function(){
     $(this).parents(".dialpage").hide();
   });
 })
-	if(is_MobleTyte){
+	if(!is_MobleTyte){
 		 $("#share123").hide();
 	}
 </script>

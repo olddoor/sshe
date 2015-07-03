@@ -85,12 +85,22 @@
 .shareimg{ width:130px; height:130px; margin:0 auto; margin-bottom:12px;}
 .shareimg img{ width:130px; height:130px;}
 .sharetxt{ height:42px; width:100%;}
-.sharetxt .t{ display:block; font-weight:normal; width:100%; height:40px; border:1px solid #eee; line-height:40px; color:#444; padding:0 5px; box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden; font-size:14px;}
-.sharetxt .t:active{ color:#222; text-decoration:none !important; border:1px solid #b8cad7;}
+.sharetxt .t{display:block;  font-weight:normal; width:100%; height:40px; border:1px solid #eee; line-height:40px; color:#444; padding:0 5px; box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; -webkit-box-sizing:border-box; overflow:hidden; font-size:14px;}
+.sharetxt .t:focus{ color:#222; text-decoration:none !important; border:1px solid #b8cad7;}
+
+
+
+
 
 .dialpage .closebtn{ height:45px; border-top:1px solid #eee;}
-.dialpage .closebtn .close{ display:block; height:45px; line-height:45px; text-align:center; color:#555; font-size:16px; border-radius:0 0 .9375em .9375em;}
-.dialpage .closebtn .close:active{ background:#eee;}
+/*.dialpage .closebtn .close{ display:block; height:45px; line-height:45px; text-align:center; color:#555; font-size:16px; border-radius:0 0 .9375em .9375em;}
+*//*.dialpage .closebtn .close:active{ background:#eee;}*/
+
+.dialpage .closebtn ul li{ float:left; width:50%;}
+.dialpage .closebtn ul li a{ display:block; width:100%; height:45px; line-height:45px; text-align:center; color:#555; font-size:16px; font-weight:normal; text-decoration:none !important;} 
+.dialpage .closebtn ul li a.close{ border-radius:0 0 0 .9375em; border-right:1px solid #eee; box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; -webkit-box-sizing:border-box;}
+.dialpage .closebtn ul li a.copy{ border-radius:0 0 .9375em 0; color:#53a5e1;}
+.dialpage .closebtn ul li a:active{ background:#eee;}
 
 @media only screen and (min-width :1025px){
 	

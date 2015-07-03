@@ -329,6 +329,10 @@ public class SyuserAction extends BaseAction<Syuser> {
 		writeJson(json);
 	}
 	
+	/**
+	 * update跳转预览的入口
+	 * @return
+	 */
 	@Action(value = "/qrqr", results = { 
 	@Result(name = "moban1",  type="redirect",location = "/moban1.jsp"),
 	@Result(name = "moban2", type="redirect",location = "/moban2.jsp"),
@@ -347,6 +351,7 @@ public class SyuserAction extends BaseAction<Syuser> {
 			this.createQRcodeOne(data.getLoginname());
 			//update结束进行跳转
 			request.getSession().setAttribute("user", t);
+			request.getSession().setAttribute("is_MobleTyte", "is_MobleTyte");//标识是否显示分享图标
 			 if(t.getQrmoban()!=null){
 			 String moban=t.getQrmoban().toString();
 			 if(moban.equals("1")){
