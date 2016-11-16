@@ -307,7 +307,7 @@
 
 	<build>
 		<finalName>sshe</finalName>
-
+ 
 		<plugins>
 			<!-- 编译的时候使用JDK7和UTF8编码 -->
 			<plugin>
